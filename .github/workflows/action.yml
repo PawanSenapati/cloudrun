@@ -1,6 +1,8 @@
 name: Deploy Hello World App
 
 on:
+  pull_request:
+    branches: [ main ]
   push:
     branches:
       - main
