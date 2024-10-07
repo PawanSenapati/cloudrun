@@ -29,7 +29,7 @@ resource "google_cloud_run_service" "app_service" {
   template {
     spec {
       containers {
-        image = "gcr.io/psenapati-sample/devops-inter:${var.image_tag}"
+        image = "us-docker.pkg.dev/psenapati-sample/github-to-cr/hello-world:${var.image_tag}"
       }
     }
   }
