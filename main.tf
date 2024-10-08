@@ -7,16 +7,8 @@ provider "google" {
 terraform {
  backend "gcs" {
    bucket  = "hello-world-state-file"
-   prefix  = "prod"
+   prefix  = "/"
  }
-}
-
-data "terraform_remote_state" "foo" {
-  backend = "gcs"
-  config = {
-    bucket  = "hello-world-state-file"
-    prefix  = "prod"
-  }
 }
 
 resource "google_cloud_run_service" "app_service" {
